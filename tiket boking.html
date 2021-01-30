@@ -11,165 +11,220 @@
         rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
-
-
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!--Header and Menu Section-->
-    <header class="container">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a class="active" href="#">Sign Up</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!--Booking Section-->
-    <section class="main-content container" id="ticketBuySection" >
-        <div class="booking-form">
-            <h3>Booking Flights</h3>
-            <div class="input-group">
-                <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
-            </div>
-            <div class="input-group">
-                <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
-            </div>
-            <div class="inputs">
+    <main  id="ticketBuySection"  class="main">
+        <!--Header and Menu Section-->
+        <header class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a class="active" href="#">Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--Booking Section-->
+        <section class="main-content container">
+            <div class="booking-form">
+                <h3>Booking Flights</h3>
                 <div class="input-group">
-                    <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                    <label for="">Flying From</label>
+                    <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
                 </div>
                 <div class="input-group">
-                    <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+                    <label for="">Flying To</label>
+                    <input class="inp-style" type="text" name="" placeholder="New York, United States">
                 </div>
-            </div>
-            <div class="input-group f-class">
-                <div>
-                <label>First class<span class="badge rounded-pill bg-primary  price_highlight"> ( $ <span id="ticketPrice">150</span> ) </span>  </label>
-                <input class="inp-style inp-width" id="flight_first_class_input_box" type="number" name="" value="0">
-                </div>
-                <div class="plus-minus-btn ">
-                    <div class="input-group number-spinner  ">
-                        <button class="btn btn-color minus " onclick="firstFlight(true)"><i class="fas fa-plus"></i></button>
-                        <button class="btn btn-color" onclick="firstFlight(false)"><i class="fas fa-minus"></i></button>
-                     </div>
-                    <!-- <p>+ -</p> -->
-                </div>
-            </div>
-            
-            <div class="input-group f-class">
-                <div>
-                    <label>Economy <span class="badge rounded-pill bg-primary  price_highlight" >( $  <span id="ticketPriceEconomy">100</span> )</span></label>
-                    <input class="inp-style inp-width" id="flight_economy_class_input_box" type="number" name="" value="0">
-                </div>
-                <div class="plus-minus-btn">
-                    <div class="input-group number-spinner">
-                        <button class="btn btn-color minus" onclick=" economyClass(true)"><i  class="fas fa-plus"></i></button>
-                        <button class="btn btn-color " onclick="economyClass(false)"><i class="fas fa-minus"></i></button>
-                     </div>
-                    <!-- <p> <span>+</span> <span>-</span> </p> -->
-                </div>
-            </div>
-            <div class="calculations">
-                <div class="amount">
-                    <div class="left">
-                        <p>Subtotal</p>
+                <div class="inputs">
+                    <div class="input-group">
+                        <label" for="">Departure</label>
+                        <input class="inp-style" type="date" name="">
                     </div>
-                    <div class="right">
-                        <p>$ <span id="subtotal_ammount">0000</span></p>
+                    <div class="input-group">
+                        <label for="">Return</label>
+                        <input class="inp-style" type="date" name="">
                     </div>
                 </div>
+                <div class="input-group f-class">
+                    <div>
+                    <label>First class<span class="badge rounded-pill bg-primary  price_highlight"> ( $ <span id="ticketPrice">150</span> ) </span>  </label>
+                    <input class="inp-style inp-width" id="flight_first_class_input_box" type="text" name="" value="0">
+                    </div>
+                    <div class="plus-minus-btn ">
+                        <div class="input-group number-spinner  ">
+                            <button class="btn btn-color minus " onclick="firstFlight(true)"><i class="fas fa-plus"></i></button>
+                            <button class="btn btn-color" onclick="firstFlight(false)"><i class="fas fa-minus"></i></button>
+                            </div>
+                    </div>
+                </div>
+                <div class="input-group f-class">
+                    <div>
+                        <label>Economy <span class="badge rounded-pill bg-primary  price_highlight" >( $  <span id="ticketPriceEconomy">100</span> )</span></label>
+                        <input class="inp-style inp-width" id="flight_economy_class_input_box" type="text" name="" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <div class="input-group number-spinner">
+                            <button class="btn btn-color minus" onclick=" economyClass(true)"><i  class="fas fa-plus"></i></button>
+                            <button class="btn btn-color " onclick="economyClass(false)"><i class="fas fa-minus"></i></button>
+                            </div>
+                        <!-- <p> <span>+</span> <span>-</span> </p> -->
+                    </div>
+                </div>
+                <div class="calculations">
+                    <div class="amount">
+                        <div class="left">
+                            <p>Subtotal</p>
+                        </div>
+                        <div class="right">
+                            <p>$ <span id="subtotal_ammount">0000</span></p>
+                        </div>
+                    </div>
 
-                <div class="amount">
-                    <div class="left">
-                        <p>Charge 10% VAT</p>
+                    <div class="amount">
+                        <div class="left">
+                            <p>Charge 10% VAT</p>
+                        </div>
+                        <div class="right">
+                            <p>$ <span id="vat_ammount">000</span></p>
+                        </div>
                     </div>
-                    <div class="right">
-                        <p>$ <span id="vat_ammount">000</span></p>
+                    <hr>
+                    <div class="amount">
+                        <div class="left">
+                            <h4>Total</h4>
+                        </div>
+                        <div class="right">
+                            <p>$ <span id="totalCharge">0000</span></p>
+                        </div>
                     </div>
                 </div>
-                <hr>
-                <div class="amount">
-                    <div class="left">
-                        <h4>Total</h4>
-                    </div>
-                    <div class="right">
-                        <p>$ <span id="totalCharge">0000</span></p>
-                    </div>
-                </div>
+                <button class="btn-style" id="bookingBtn">Book Now</button>
             </div>
-            <button class="btn-style" id="bookingBtn">Book Now</button>
-        </div>
 
-        <div class="booking-content">
-            <h1>discover <br> around the world</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
-        </div>
-    </section>
-
+            <div class="booking-content">
+                <h1>discover <br> around the world</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
+            </div>
+        </section>
+</main>
  <!-- second page -->
     <section id="succesful_section" class="second_page">
         <div class="container">
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-    
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                      Accordion Item #1
-                    </button>
-                  </h2>
-                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
-                  </div>
+            <div class="alert alert-success alert_massege text-center" role="alert"> 
+                <p id="welcome">Welcome to...</p>
+                The first step in creating a holiday customer service strategy is to outline a concrete plan beforehand and then communicate the vision to your employees. Good planning and preparation can help you come out stronger rather than going out of control.
+              </div>
+          </div>
+          <div class="check_mark">
+            <div class="sa-icon sa-success animate">
+              <span class="sa-line sa-tip animateSuccessTip"></span>
+              <span class="sa-line sa-long animateSuccessLong"></span>
+              <div class="sa-placeholder"></div>
+              <div class="sa-fix"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row text-center  s_position">
+                <div class="col-sm-6 col-sm-offset-3 text_box_position">
+                <br><br> <h2 id="success_text" style="color:#0fad00">Success</h2>
+                <img class="s_picture" src="images/s_pic.jpg">
+                <h3>Dear, Faisal khan</h3>
+                <p style="font-size:20px;color:#5C5C5C;">Thank you for verifying your Mobile No.We have sent you an email "faisalkhan.chat@gmail.com" with your details
+                    Please go to your above email now and login.</p>
                 </div>
-    
-    
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                      Accordion Item #2
-                    </button>
-                  </h2>
-                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
-                  </div>
+            </div>
+            <p class="guide text-center">Passengers Guidelines</p>
+            <div class="card">
+                <div class="card-header">
+                    Self-Isolation
                 </div>
-    
-    
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                      Accordion Item #3
-                    </button>
-                  </h2>
-                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat haven't heard of them accusamus labore sustainable VHS.</div>
-                  </div>
+                <div class="card-body">
+                  <h5 class="card-title">When you self-isolate, stay home and keep away from others to help stop the spread of COVID-19n</h5>
+                  <p class="card-text">When you self-isolate, you stay home and avoid contact with other people. This important step helps reduce the spread of COVID-19. 
+
+                    Here you will find information about who needs to self-isolate, the length of time you will need to self-isolate for your situation, and steps you can take to keep yourself and others healthy.</p>
                 </div>
               </div>
-        
+              <br>
+              <div class="card"> 
+              <div class="card-header">
+                Testing for COVID-19
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Testing can determine if you have COVID-19. This is an important step to help reduce the spread of the virus. When a person tests positive for COVID-19, they stay home or isolate.</h5>
+              <p class="card-text">Testing is used to determine if someone currently has COVID-19. COVID-19 testing is done by swishing and gargling salt water and spitting it into a tube or by using a swab to collect a sample from a person’s nose. Learn more:</p>
+            </div>
+        </div>
+        <br>
+        <p class="guide text-center">Risks</p>
+        <div class="card"> 
+            <div class="card-header">
+                Prevention & Risks
           </div>
+          <div class="card-body">
+            <h5 class="card-title">There are many things you can do to prevent the spread of COVID-19 in your community.</h5>
+            <p class="card-text">Below you will find preventative measures and actions you can take to stay healthy and prevent the spread of COVID-19.</p>
+          </div>
+      </div>
+      <br>
+      <p class="guide text-center">FAQ</p>
+      <div class="card"> 
+        <div class="card-header">
+            Common Questions
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Find answers to some of the most common questions about COVID-19..</h5>
+        <p class="card-text">Coronaviruses are a large family of viruses found mostly in animals. In humans, they can cause diseases ranging from the common cold to more severe diseases such as Severe Acute Respiratory Syndrome (SARS) and Middle East Respiratory Syndrome (MERS). The disease caused by this new coronavirus has been named COVID-19. The virus that causes COVID-19 is called SARS-CoV-2. 
+
+            COVID-19 was first identified in late 2019. It was declared a global pandemic by the World Health Organization in March 2020.</p>
+      </div>
+          </div>
+          <br>
+          <p class="guide text-center">CONTACT US</p>
+          <div class="card"> 
+            <div class="card-header">
+                Head Office
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">Biman Bangladesh Airlines LTD</li>
+                <li class="list-group-item">Head Office, "BALAKA", Kurmitola, Dhaka-1229, Bangladesh</li>
+                <li class="list-group-item">Telephone: ‘BALAKA’: +88-02-8901600, +88-02-8901730-44</li>
+                <li class="list-group-item">Admin Building, Terminal Building & Hanger Complex: +88-02-8901500-22, +88-02-8901640-54, Fax: +88-02-8901558</li>
+              </ul>
+          </div>
+      </div>
+      <br>
+      <div class="card"> 
+        <div class="card-header">
+            E-Mail
+      </div>
+      <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">For online ticketing: ibebiman@bdbiman.com</li>
+            <li class="list-group-item">For online ticket refund: iberefund@bdbiman.com</li>
+            <li class="list-group-item">For customer query: dgmgs@bdbiman.com</li>
+            <li class="list-group-item">For customer feedback and complaints: gmcs@bdbiman.com</li>
+          </ul>
+      </div>
+  </div>
+  <br><br><br>        
+        </div>
     </section>
 
-
+    
    <script>
-function secondPage() {
-            document.getElementById("bookingBtn").addEventListener("click",function(){   
-            document.getElementById("ticketBuySection").style.display="none";
-            document.getElementById("succesful_section").style.display="block";
-        })
-       
+        function secondPage() {
+                    document.getElementById("bookingBtn").addEventListener("click",function(){   
+                    document.getElementById("ticketBuySection").style.display="none";
+                    document.getElementById("succesful_section").style.display="block";
+                })     
 }
-
 // first flight
          function firstFlight(isIncrease) {
             const ticketInput= document.getElementById("flight_first_class_input_box");
@@ -219,11 +274,7 @@ function calculation() {
     document.getElementById("totalCharge").innerText=total_Charge;
     
 }
-
 </script>
 
-
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
