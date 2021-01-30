@@ -5,6 +5,10 @@
     text-decoration: none;
     list-style-type: none;
 }
+.second_page{
+
+    display: none;
+}
 body{
     font-family: 'Roboto', sans-serif;
     background:url("images/bg.png");
@@ -63,7 +67,11 @@ nav ul li a:hover, a.active{
     align-items: center;
 }
 .inp-width{
-    min-width: 300px;
+    min-width: 270px;
+}
+.price_highlight{
+    color: #fff;
+    font-size: 15px;
 }
 .plus-minus-btn{
     color: #3352F2;
@@ -71,6 +79,18 @@ nav ul li a:hover, a.active{
     padding: 2px;
     margin-top: 10px;
     word-spacing: 20px;
+}
+.btn-color{
+    color: #3352F2;
+    border-radius: 15px;
+    margin-top: 19px;
+    word-spacing: 20px;
+}
+.gap-plus{
+    padding-right: 10px;
+}
+.minus{
+    margin-right: 17px;  
 }
 .booking-form  .calculations{
     margin: 10px 0;
